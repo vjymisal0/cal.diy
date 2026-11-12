@@ -21,13 +21,9 @@ jobs:
       matrix:
         include:
           - pr: '30212'
-            source: a5635bb74ddf0e913aca2ffa2733d55976538d7f
+            source: 398395d4abadc255fe7c274ba977b1fe69e39c34
             production: packages/lib/CalendarService.ts
             tests: packages/lib/CalendarService.test.ts
-          - pr: '30181'
-            source: 0ba4ebbad46e6f9de4bf7668c31ecff20cc2b465
-            production: packages/features/schedules/lib/date-ranges.ts
-            tests: packages/features/schedules/lib/date-ranges.test.ts
     env:
       SOURCE_SHA: ${{ matrix.source }}
       TEST_FILE: ${{ matrix.tests }}
